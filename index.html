@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martell test - Escolar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px 0;
+        }
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .aviso-gps {
+            background-color: #332714;
+            border-left: 4px solid #ff9800;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #bb86fc;
+            color: #121212;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #985eff;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2d2d2d;
+            border-radius: 5px;
+            display: none;
+            font-size: 14px;
+            border-left: 4px solid #bb86fc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Martell test</h1>
+        <div class="aviso-gps">
+            ⚠️ <strong>Aviso importante:</strong> no usar IA el navegador reconoce la IP de inteligencis artificiaes.
+        </div>
+
+        <form id="quizForm">
+            
+            <!-- Campo para que pongan su nombre -->
+            <div class="question">
+                <label>Tu Nombre Completo:</label>
+                <input type="text" name="alumno" required placeholder="Ej. Juan Pérez" style="width: 100%; padding: 10px; background-color: #2d2d2d; border: 1px solid #444; color: #fff; border-radius: 5px;">
+            </div>
+
+            <!-- Pregunta 1 -->
+            <div class="question">
+                <label>1. ¿Qué extensión tienen por lo general los archivos de código fuente en Java?</label>
+                <select name="p1" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">.js</option>
+                    <option value="correcta">.java</option>
+                    <option value="incorrecta">.py</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question">
+                <label>2. ¿Cuál de los siguientes es un lenguaje de marcado y no de programación?</label>
+                <select name="p2" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">HTML</option>
+                    <option value="incorrecta">Python</option>
+                    <option value="incorrecta">C++</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question">
+                <label>3. ¿Qué símbolo se usa comúnmente para comentarios de una sola línea?</label>
+                <select name="p3" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">--</option>
+                    <option value="correcta">//</option>
+                    <option value="incorrecta">/* ... */</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <label>4. ¿Qué estructura se usa para repetir un bloque de código (bucle)?</label>
+                <select name="p4" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">if / else</option>
+                    <option value="correcta">for / while</option>
+                    <option value="incorrecta">variable</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question">
+                <label>5. ¿Qué significa SQL?</label>
+                <select name="p5" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">Structured Query Language</option>
+                    <option value="incorrecta">Simple Quick Logic</option>
+                    <option value="incorrecta">System Quality Line</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="question">
+                <label>6. ¿Cuál de los siguientes lenguajes se asocia principalmente al desarrollo web del lado del navegador (frontend)?</label>
+                <select name="p6" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">Java</option>
+                    <option value="correcta">JavaScript</option>
+                    <option value="incorrecta">Python</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="question">
+                <label>7. ¿Qué tipo de dato se utiliza para almacenar valores de verdadero o falso?</label>
+                <select name="p7" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">Boolean</option>
+                    <option value="incorrecta">Integer</option>
+                    <option value="incorrecta">String</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="question">
+                <label>8. En Python, ¿con qué palabra clave se define una función?</label>
+                <select name="p8" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">function</option>
+                    <option value="correcta">def</option>
+                    <option value="incorrecta">fun</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="question">
+                <label>9. ¿Qué comando de Git se utiliza para descargar o clonar un repositorio existente?</label>
+                <select name="p9" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">git clone</option>
+                    <option value="incorrecta">git push</option>
+                    <option value="incorrecta">git commit</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div class="question">
+                <label>10. ¿Cuál de los siguientes motores de base de datos es relacional?</label>
+                <select name="p10" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">MongoDB</option>
+                    <option value="correcta">MySQL</option>
+                    <option value="incorrecta">Redis</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 11 -->
+            <div class="question">
+                <label>11. ¿Qué significa la sigla OOP en el contexto de programación?</label>
+                <select name="p11" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">Object-Oriented Programming</option>
+                    <option value="incorrecta">Online Open Process</option>
+                    <option value="incorrecta">Optimized Output Program</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 12 -->
+            <div class="question">
+                <label>12. ¿Cuál es el operador lógico que representa la operación "Y" (AND) en la mayoría de lenguajes?</label>
+                <select name="p12" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">||</option>
+                    <option value="correcta">&amp;&amp;</option>
+                    <option value="incorrecta">!</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 13 -->
+            <div class="question">
+                <label>13. ¿Qué etiqueta de HTML se utiliza para crear un enlace o hipervínculo?</label>
+                <select name="p13" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">&lt;a&gt;</option>
+                    <option value="incorrecta">&lt;link&gt;</option>
+                    <option value="incorrecta">&lt;href&gt;</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 14 -->
+            <div class="question">
+                <label>14. ¿Qué estructura de datos almacena elementos en orden LIFO (Last In, First Out)?</label>
+                <select name="p14" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="incorrecta">Cola (Queue)</option>
+                    <option value="correcta">Pila (Stack)</option>
+                    <option value="incorrecta">Árbol (Tree)</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 15 -->
+            <div class="question">
+                <label>15. En C++, ¿cómo se llama el método o función principal por donde empieza a ejecutarse el programa?</label>
+                <select name="p15" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="correcta">main()</option>
+                    <option value="incorrecta">start()</option>
+                    <option value="incorrecta">init()</option>
+                </select>
+            </div>
+
+            <!-- Campos ocultos -->
+            <input type="hidden" name="calificacion" id="inputCalificacion">
+            <input type="hidden" name="ubicacion" id="inputUbicacion">
+
+            <button type="submit" id="btnEnviar">Enviar respuestas</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeagarqr";
+
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('btnEnviar');
+            const resultadoDiv = document.getElementById('resultado');
+            btn.disabled = true;
+            btn.textContent = "Verificando .";
+            resultadoDiv.style.display = 'block';
+            resultadoDiv.innerHTML = 'continiar.';
+
+            // 1. Validar Geolocalización Obligatoria
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        
+                        // Opcional: Aquí puedes poner una validación de distancia aproximada a la escuela si gustas
+                        // Por ahora guardamos el enlace exacto de Google Maps para que veas desde dónde lo mandaron
+                        const coordTexto = `Lat: ${lat}, Lon: ${lon} (https://maps.google.com/?q=${lat},${lon})`;
+                        document.getElementById('inputUbicacion').value = coordTexto;
+
+                        // Calificar e iniciar envío
+                        calificarYEnviar();
+                    },
+                    function(error) {
+                        // SI RECHAZAN EL PERMISO, BLOQUEAMOS EL ENVÍO
+                        resultadoDiv.innerHTML = `<span style="color: #cf6679; font-weight: bold;">❌ Error: Es obligatorio permitir el acceso para enviar está vaina .</span>`;
+                        btn.disabled = false;
+                        btn.textContent = "Enviar respuestas";
+                    },
+                    { enableHighAccuracy: true }
+                );
+            } else {
+                resultadoDiv.innerHTML = `<span style="color: #cf6679;">Tu navegador no soporta geolocalización.</span>`;
+                btn.disabled = false;
+                btn.textContent = "Enviar respuestas";
+            }
+        });
+
+        function calificarYEnviar() {
+            // Calificamos las respuestas
+            const selects = document.querySelectorAll('select');
+            let correctas = 0;
+            selects.forEach(s => {
+                if (s.value === 'correcta') correctas++;
+            });
+            
+            document.getElementById('inputCalificacion').value = `${correctas} de 15 correctas`;
+
+            const form = document.getElementById('quizForm');
+            const data = new FormData(form);
+            const resultadoDiv = document.getElementById('resultado');
+
+            resultadoDiv.innerHTML = 'Enviando respuestas ...';
+
+            fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    resultadoDiv.innerHTML = `
+                        <strong style="color: #4caf50;">¡Examen enviado y registrado con éxito!</strong><br>
+                        Tus respuestas 
+                    `;
+                    form.reset();
+                } else {
+                    resultadoDiv.innerHTML = `<span style="color: #cf6679;">Error al enviar el formulario. Intenta de nuevo.</span>`;
+                    document.getElementById('btnEnviar').disabled = false;
+                    document.getElementById('btnEnviar').textContent = "Enviar respuestas";
+                }
+            }).catch(error => {
+                resultadoDiv.innerHTML = `<span style="color: #cf6679;">Error de conexión.</span>`;
+                document.getElementById('btnEnviar').disabled = false;
+                document.getElementById('btnEnviar').textContent = "Enviar respuestas";
+            });
+        }
+    </script>
+
+</body>
+</html>
